@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript</title>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <input type="number" name="num1" id="">
+    <input type="number" name="num2" id="">
+    <button>Add</button>
+    <p></p>
+    <script>
+        async function tryout() {
+            let res = await fetch("/note");
+            let data = await res.json();
+            console.log("data----------------------------------------");
+            console.log(data);
+            console.log("data----enddddddddddddddddd------------------------------------");
+            let res2 = await fetch("/note", {
+                method: "POST",
+                // Adding headers to the request
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    task: "Himanshu"
+                })
+            });
+            let data2 = await res2.json();
+            console.log(data2);
+        }
+        tryout();
+    </script>
+</body>
+
+</html>

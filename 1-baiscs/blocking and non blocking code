@@ -1,0 +1,6 @@
+if we use sync operations 
+it actually blocks the code
+and issue is like if we use sync operations while uploading a big file or so
+it will blobk the code and lot even listen to incoming requests
+so we should always use async operations
+ 

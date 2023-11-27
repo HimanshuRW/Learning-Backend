@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        block headContentTry
+    body.p-5
+        h1 #{docTitle}
+        br 
+        br
+        ul(class="nav nav-pills")
+            li.nav-item
+                a(class="nav-link",id="addProductLink",aria-current="page",href="/admin/add-product") Add Product 
+            li.nav-item
+                a(class="nav-link",id="addProductLink",aria-current="page",href="/") Shop 
+        br
+        br
+
+        block shopContent
+        

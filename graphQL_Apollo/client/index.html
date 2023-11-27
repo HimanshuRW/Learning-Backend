@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>All The notes are here</h1>
+    <div id="notes" class="d-flex flex-wrap"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script>
+        const notes_container = document.getElementById("notes");
+        async function load_notes() {
+            let graphQL_query = {
+                query: `
+                    query RandomName {
+                        getTodos {
+                            title completed
+                            user {
+                                name
+                            }
+                        }
+                    }`,
+                operationName: "RandomName"
+            };
+            let url = `http://localhost:3000/graphql`;
+            console.log("sending.....");
+            let result = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(graphQL_query)
+            });
+            let data = await result.json();
+            console.log(data);
+            for (todo of data.data.getTodos) {
+                let toAppend = `
+                <div class="card m-2">
+                    <div class="card-header">${todo.user.name}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">${todo.title}</h5>
+                `;
+                        if (todo.completed) {
+                            toAppend += `<p class="card-text">Done</p>`;
+                        } else toAppend += `<a href="#" class="btn btn-primary">Completed</a>`;
+                    toAppend += `
+                    </div>
+                </div>`;
+                notes_container.innerHTML +=toAppend;
+            }
+        }
+        load_notes();
+    </script>
+</body>
+
+</html>

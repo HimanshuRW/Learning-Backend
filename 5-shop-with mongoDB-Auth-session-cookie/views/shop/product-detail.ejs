@@ -1,0 +1,16 @@
+<%- include('../includes/head.ejs') %>
+<!-- navigation ends here -->
+<div class="media d-flex justify-content-around">
+    <img class="mr-3" src="<%= product.imgUrl %>" alt="Generic placeholder image">
+    <div class="media-body">
+      <h2 class="mt-0 mb-5"><%= product.title %></h2>
+      <p>
+          <%= product.description %>
+      </p>
+      <h4 class="mt-5">$<%= product.price %></h4>
+      <a href="/addToCart/<%= product._id %>" class="btn btn-primary mt-5">Add to cart</a>
+    </div>
+  </div>
+<%- include('../includes/scripts.ejs') %>
+</body>
+</html>

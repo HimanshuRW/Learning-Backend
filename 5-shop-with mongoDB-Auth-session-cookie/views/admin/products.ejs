@@ -1,0 +1,25 @@
+<%- include('../includes/head.ejs') %>
+    <!-- navigation ends here -->
+    <% if(productList.length>0) { %>
+        <div class="d-flex justify-content-around flex-wrap" style="max-width: 95vw;">
+            <!-- <div class="d-flex"> -->
+                <% for (product of productList) { %>
+                    <div class="card m-5" style="width: 18rem;">
+                        <img class="card-img-top" src="<%= product.imgUrl %>" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title"><%= product.title %></h5>
+                        <p class="card-text"><%= product.description %></p>
+                        <h5 class="card-title">$<%= product.price %></h5>
+                        <a class="btn btn-primary" href="/admin/edit-product/<%= product._id %>" role="button">Edit</a>
+                            <a class="btn btn-primary" href="/admin/delete-product/<%= product._id %>" role="button">Delete</a>
+                        </div>
+                    </div>
+                <% } %>
+            <!-- </div> -->
+        </div>
+    <% } else { %>
+        <h2>No products !!!</h2>
+    <% } %>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+    <!-- navigation ends here -->
+    <% if(productList.length>0) { %>
+        <div class="d-flex justify-content-around">
+            <div class="d-flex flex-wrap" style="max-width: 85vw;">
+                <% for (product of productList) { %>
+                    <div class="card m-5" style="width: 18rem;">
+                        <img class="card-img-top" src="<%= product.imgUrl %>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= product.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= product.description %>
+                            </p>
+                            <h5 class="card-title">$<%= product.price %>
+                            </h5>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="/decrease/<%= product.id %>">
+                                    <button type="button" class="btn btn-secondary no-rounded">
+                                        -
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-secondary no-rounded"><%= product.quantity %></button>
+                                <a href="/addToCart/<%= product.id %>">
+                                    <button type="button" class="btn btn-secondary no-rounded">
+                                        +
+                                    </button>
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+            <div class="right">
+                <h3>
+                    $ <%= totalAmt %>
+                </h3>
+                <a href="/checkout" class="btn btn-success">Checkout</a>
+            </div>
+        </div>
+    <% } else { %>
+        <h2>No products !!!</h2>
+    <% } %>
+    <%- include('../includes/scripts.ejs') %>
+        </body>
+
+        </html>

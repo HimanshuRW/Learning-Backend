@@ -1,0 +1,16 @@
+h1{
+    color: red;
+}
+.card>a{
+    text-decoration: none;
+    color: white;
+}
+.no-rounded{
+    border-radius: 0px;
+}
+li{
+    list-style-type: none;
+}
+.detail-img{
+    width:30%;
+}

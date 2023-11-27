@@ -1,0 +1,25 @@
+https://loremflickr.com/320/240/
+
+cart = {
+    products : [
+        {
+            id : ---
+            qnty: ---
+        },
+        {
+            id : ---
+            qnty: ---
+        },
+        {
+            id : ---
+            qnty: ---
+        }
+    ], 
+    totalAmt : ---
+}
+
+add to cart 
+
+delete item
+
+delete from cart

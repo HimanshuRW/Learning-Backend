@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="topic" id="topic">
+    <button id="btn" onclick="ask()">SEND</button>
+    <script>
+        let topicInput = document.getElementById("topic");
+        async function ask() {
+            let topic = topicInput.value;
+            let result = await fetch("/aysncReq/"+topic,{
+                method:"DELETE"
+            });
+            let data = await result.json();
+            console.log(data);
+        }
+    </script>
+</body>
+</html>

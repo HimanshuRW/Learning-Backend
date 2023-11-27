@@ -1,0 +1,29 @@
+<%- include('../includes/head.ejs') %>
+  <!-- navigation ends here -->
+  <form method="POST" action="/admin/edit-product">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name </label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter Name.." name="title" value="<%= product.title %>">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Img URL </label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter Name.." name="imgUrl" value="<%= product.imgUrl %>">
+    </div> <br>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Price </label>
+      <input type="number" step=".01" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter Name.." name="price" value="<%= product.price %>">
+    </div> <br>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Product Description</label>
+      <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"><%= product.description %></textarea>
+    </div> <br>
+    <input type="number" style="display: none;" value="<%= product.id %>" name="id">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <%- include('../includes/scripts.ejs') %>
+</body>
+</html>

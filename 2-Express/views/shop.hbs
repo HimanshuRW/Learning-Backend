@@ -1,0 +1,17 @@
+{{#if productIs}}
+    {{#each productList}}
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">
+                Header
+            </div>
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    {{this}}
+                </h5>
+            </div>
+        </div>  
+    {{/each}}
+{{else}}
+    <h2>No Product</h2>
+{{/if}}

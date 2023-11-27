@@ -1,0 +1,154 @@
+https://loremflickr.com/320/240/
+
+cart = {
+    products : [
+        {
+            id : ---
+            qnty: ---
+        },
+        {
+            id : ---
+            qnty: ---
+        },
+        {
+            id : ---
+            qnty: ---
+        }
+    ], 
+    totalAmt : ---
+}
+
+add to cart 
+
+delete item
+
+delete from cart
+
+
+----
+
+
+https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentInforegistrationforattendence
+Accept:
+application/json, text/plain, */*
+Accept-Encoding:
+gzip, deflate, br
+Accept-Language:
+en-US,en;q=0.9
+Authorization:
+Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxRHhlZ094SWtJenovV09HY2J0aEh3PT0iLCJzY29wZXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfU1RVREVOVCJ9XSwiaXNzIjoiaHR0cDovL2NhbXB1c2x5bnguY29tIiwiaWF0IjoxNjkzNTk2NzgwLCJleHAiOjE2OTM2ODY3ODB9.HuwED9ADGiFHshhfp1PfNZJB0sWEKEflaEUBHCU9BIA
+Connection:
+keep-alive
+Content-Length:
+70
+Content-Type:
+application/json
+Cookie:
+_ga=GA1.3.330090487.1689959716; _fbp=fb.2.1689959718832.1810903909; _ga_6B7MX6H11K=GS1.3.1692129195.5.0.1692129195.60.0.0; _ga_P40BH6QJHK=GS1.3.1692129195.5.0.1692129195.0.0.0
+Host:
+webportal.jiit.ac.in:6011
+Origin:
+https://webportal.jiit.ac.in:6011
+Referer:
+https://webportal.jiit.ac.in:6011/studentportal/
+Sec-Ch-Ua:
+"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+Sec-Ch-Ua-Mobile:
+?1
+Sec-Ch-Ua-Platform:
+"Android"
+Sec-Fetch-Dest:
+empty
+Sec-Fetch-Mode:
+cors
+Sec-Fetch-Site:
+same-origin
+User-Agent:
+Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36
+
+--- or same headers in raw format is 
+POST /StudentPortalAPI/StudentClassAttendance/getstudentInforegistrationforattendence HTTP/1.1
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxRHhlZ094SWtJenovV09HY2J0aEh3PT0iLCJzY29wZXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfU1RVREVOVCJ9XSwiaXNzIjoiaHR0cDovL2NhbXB1c2x5bnguY29tIiwiaWF0IjoxNjkzNTk2NzgwLCJleHAiOjE2OTM2ODY3ODB9.HuwED9ADGiFHshhfp1PfNZJB0sWEKEflaEUBHCU9BIA
+Connection: keep-alive
+Content-Length: 70
+Content-Type: application/json
+Cookie: _ga=GA1.3.330090487.1689959716; _fbp=fb.2.1689959718832.1810903909; _ga_6B7MX6H11K=GS1.3.1692129195.5.0.1692129195.60.0.0; _ga_P40BH6QJHK=GS1.3.1692129195.5.0.1692129195.0.0.0
+Host: webportal.jiit.ac.in:6011
+Origin: https://webportal.jiit.ac.in:6011
+Referer: https://webportal.jiit.ac.in:6011/studentportal/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+sec-ch-ua-mobile: ?1
+sec-ch-ua-platform: "Android"
+
+
+
+-----------------------------------------------------
+---- for subect wise attendecen -----------------
+
+POST req at ->  https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentattendancedetail
+--- headers ----
+Accept:
+application/json, text/plain, */*
+Accept-Encoding:
+gzip, deflate, br
+Accept-Language:
+en-US,en;q=0.9
+Authorization:
+Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxRHhlZ094SWtJenovV09HY2J0aEh3PT0iLCJzY29wZXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfU1RVREVOVCJ9XSwiaXNzIjoiaHR0cDovL2NhbXB1c2x5bnguY29tIiwiaWF0IjoxNjkzNTk2NzgwLCJleHAiOjE2OTM2ODY3ODB9.HuwED9ADGiFHshhfp1PfNZJB0sWEKEflaEUBHCU9BIA
+Connection:
+keep-alive
+Content-Length:
+105
+Content-Type:
+application/json
+Cookie:
+_ga=GA1.3.330090487.1689959716; _fbp=fb.2.1689959718832.1810903909; _ga_6B7MX6H11K=GS1.3.1692129195.5.0.1692129195.60.0.0; _ga_P40BH6QJHK=GS1.3.1692129195.5.0.1692129195.0.0.0
+Host:
+webportal.jiit.ac.in:6011
+Origin:
+https://webportal.jiit.ac.in:6011
+Referer:
+https://webportal.jiit.ac.in:6011/studentportal/
+Sec-Ch-Ua:
+"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+Sec-Ch-Ua-Mobile:
+?1
+Sec-Ch-Ua-Platform:
+"Android"
+Sec-Fetch-Dest:
+empty
+Sec-Fetch-Mode:
+cors
+Sec-Fetch-Site:
+same-origin
+User-Agent:
+Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36
+
+
+--- in raw form ----
+POST /StudentPortalAPI/StudentClassAttendance/getstudentattendancedetail HTTP/1.1
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxRHhlZ094SWtJenovV09HY2J0aEh3PT0iLCJzY29wZXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfU1RVREVOVCJ9XSwiaXNzIjoiaHR0cDovL2NhbXB1c2x5bnguY29tIiwiaWF0IjoxNjkzNTk2NzgwLCJleHAiOjE2OTM2ODY3ODB9.HuwED9ADGiFHshhfp1PfNZJB0sWEKEflaEUBHCU9BIA
+Connection: keep-alive
+Content-Length: 105
+Content-Type: application/json
+Cookie: _ga=GA1.3.330090487.1689959716; _fbp=fb.2.1689959718832.1810903909; _ga_6B7MX6H11K=GS1.3.1692129195.5.0.1692129195.60.0.0; _ga_P40BH6QJHK=GS1.3.1692129195.5.0.1692129195.0.0.0
+Host: webportal.jiit.ac.in:6011
+Origin: https://webportal.jiit.ac.in:6011
+Referer: https://webportal.jiit.ac.in:6011/studentportal/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36
+sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+sec-ch-ua-mobile: ?1
+sec-ch-ua-platform: "Android"

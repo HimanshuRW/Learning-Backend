@@ -1,0 +1,27 @@
+<%- include('../includes/head.ejs') %>
+    <!-- navigation ends here -->
+  <% if(errMsg) { %>
+  <div class="alert alert-danger m-5" role="alert">
+    <%= errMsg %>
+  </div>
+  <% } %>
+    <form class="m-5" method="POST" action="/register">
+        <div class="form-group m-4">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" name="email" class="form-control m-1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group m-4">
+          <label for="exampleInputPassword1">Password</label>
+          <input name="password" type="password" class="form-control m-1" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group m-4">
+          <label for="exampleInputPassword2">Confirm Password</label>
+          <input name="confirm_password" type="password" class="form-control m-1" id="exampleInputPassword2" placeholder="Confirm Password">
+        </div>
+        <button type="submit" class="btn btn-primary m-4">Submit</button>
+      </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

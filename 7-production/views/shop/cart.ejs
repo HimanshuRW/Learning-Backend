@@ -1,0 +1,58 @@
+<%- include('../includes/head.ejs') %>
+    <!-- navigation ends here -->
+    <% if(productList.length>0) { %>
+        <div class="d-flex justify-content-around">
+            <div class="d-flex flex-wrap" style="max-width: 85vw;">
+                <% for (product of productList) { %>
+                    <div class="card m-5" style="width: 18rem;">
+                        <img class="card-img-top" src="<%= product.productId.imgUrl %>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= product.productId.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= product.productId.description %>
+                            </p>
+                            <h5 class="card-title">$<%= product.productId.price %>
+                            </h5>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="/decrease/<%= product.productId._id %>">
+                                    <button type="button" class="btn btn-secondary no-rounded">
+                                        -
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-secondary no-rounded"><%= product.quantity %></button>
+                                <a href="/addToCart/<%= product.productId._id %>">
+                                    <button type="button" class="btn btn-secondary no-rounded">
+                                        +
+                                    </button>
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+            <div class="right">
+                <h3>
+                    $ <%= totalAmt %>
+                </h3>
+                <btn class="btn btn-success" id="checkoutBtn">Checkout</btn>
+            </div>
+        </div>
+    <% } else { %>
+        <h2>No products !!!</h2>
+    <% } %>
+    <%- include('../includes/scripts.ejs') %>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        let stripe = Stripe("pk_live_51NndDXSIDierbZqcDoPuejEXnCcNvrWRY1iVvAJ9lGkt2RZmRMEAbcMCmgTxjRndUPuNQ6HagqZ9QB4EdQ57p4C600Z1wERwjK");
+        const checkoutBtn = document.getElementById("checkoutBtn");
+        checkoutBtn.addEventListener("click",()=>{
+            stripe.redirectToCheckout({
+                sessionId : "<%= stripe_session_id %>"
+            })
+        })
+    </script>
+        </body>
+
+        </html>
